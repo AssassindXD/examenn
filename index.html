@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matricula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: cadetblue;
+            padding: 5px;
+        }
+
+        .container{
+            border: solid 2px black;
+            border-radius: 25px;
+            background-color: whitesmoke;
+            box-shadow: 1.5px 2px 3px black;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Formulario bootstrap5
+    Cree una página HTML utilizando Bootstrap 5 que contenga un formulario de matrícula de estudiante.
+    El formulario debe ser responsivo y estar correctamente maquetado utilizando el sistema de grid y
+    componentes de formularios de Bootstrap. Debe tomar en cuenta los campos de la tabla
+    enrollments y students
+    -->
+
+    <div class="container">
+        <h1 class="mt-5">Formulario de Matrícula de Estudiante</h1>
+        <form>
+
+            <!-- Datos del estudiante -->
+            <h4 class="mt-4">Datos del Estudiante</h4>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="primerNombre" class="form-label">Primer Nombre</label>
+                    <input type="text" class="form-control" id="primerNombre" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="segundoNombre" class="form-label">Segundo Nombre</label>
+                    <input type="text" class="form-control" id="segundoNombre">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="primerApellido" class="form-label">Primer Apellido</label>
+                    <input type="text" class="form-control" id="primerApellido" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="segundoApellido" class="form-label">Segundo Apellido</label>
+                    <input type="text" class="form-control" id="segundoApellido">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <select class="form-select" id="sexo" required>
+                        <option value="" disabled selected>Seleccione el sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                </div>
+            </div>
+
+        
+            <!-- Datos de matrícula -->
+            <h4 class="mt-4">Datos de Matrícula</h4>
+            <div class="row mb-3">
+                <label for="courseSelect" class="col-sm-2 col-form-label">Curso</label>
+                <div class="col-sm-10">
+                    <select class="form-select" id="courseSelect" required>
+                        <option value="" disabled selected>Seleccione un curso</option>
+                        <option value="course1">Ing sistema</option>
+                        <option value="course2">administracion</option>
+                        <option value="course3">derecho</option>
+                         <option value="course2">psicologia</option>
+                        <option value="course3">contaduria</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="enrollmentDate" class="col-sm-2 col-form-label">Fecha de Matrícula</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="enrollmentDate" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label for="periodo" class="form-label">Período</label>
+                    <input type="text" class="form-control" id="periodo" placeholder="Ej: I-2025" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="anio" class="form-label">Año</label>
+                    <input type="number" class="form-control" id="anio" placeholder="Ej: 2025" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="anioEstudio" class="form-label">Año de Estudio</label>
+                    <input type="number" class="form-control" id="anioEstudio" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="repitio" class="form-label">¿Repitió?</label>
+                    <select class="form-select" id="repitio" required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="estatus" class="col-sm-2 col-form-label">Estatus</label>
+                <div class="col-sm-10">
+                    <select class="form-select" id="estatus" required>
+                        <option value="" disabled selected>Seleccione estatus</option>
+                        <option value="Activo">re-entry</option>
+                        <option value="Inactivo">new-entry</option>
+                       
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-primary mb-5">Enviar</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
